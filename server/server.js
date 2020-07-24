@@ -26,7 +26,7 @@ mongoose.connect(process.env.URLDB, {
     if (err) throw err
     else console.log('base de datos online');
 });
-
+mongoose.set('useFindAndModify', false);
 app.listen(process.env.PORT, () => {
     console.log('Escuchando puerto 3000');
 })
